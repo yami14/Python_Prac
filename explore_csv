@@ -1,0 +1,21 @@
+import csv
+with open("data.csv", "w+") as csvfiles:
+    writer= csv.writer(csvfiles)
+    writer.writerow(["Status", "Description"])
+    writer.writerow(["Passed", "Higher secondry performance status"])
+    
+with open("data.csv", "r") as csvfiles:
+    reader= csv.reader(csvfiles)
+    for csv in reader:
+        print (csv)
+        
+with open("data.csv", "a") as csvfiles:
+    writer= csv.writer(csvfiles)
+    writer.writerow(["Status", "Description", "Percentage"])
+    writer.writerow(["Passed", "Higher secondry performance status", "91.8"])    
+    
+with open("data.csv", "w") as csvfiles:
+    fieldnames =["id", "title"]
+    writer.Dictwriterow(csvfiles, fieldname = fieldnames)
+    writer.writeheader()
+    writer.writerow(["id" :123, "title": "Engineer"])
