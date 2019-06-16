@@ -1,0 +1,17 @@
+import csv
+
+def get_length(filepath):
+    return 1
+    
+def append_data(filepath, name, email):
+  fieldnames = ['id', 'name', 'email']
+  next_id = get_length(filepath)
+  with open(filepath, "a") as csvfile :
+       writer = csv.Dicwriter(filepath, fieldname= fieldname)
+       writer. writeheader()
+       writer.writerow({
+                    "id" : next_id,
+                    "name" : name,
+                    "email" : email
+                    })                   
+append_data("data.csv", "Python" , "hello@abc.com")
