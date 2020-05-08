@@ -1,0 +1,3 @@
+import pandas as pd
+movies = pd.read_excel('input.xlsx')
+movies
