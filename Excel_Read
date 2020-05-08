@@ -1,0 +1,5 @@
+from openpyxl import load_workbook
+workbook = load_workbook(filename="input.xlsx")
+sheet = workbook.active
+for value in sheet.iter_rows(min_row=0,max_row=sheet.max_row, min_col=0,max_col=sheet.max_column,values_only=True):
+    print(value)
